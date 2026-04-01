@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+</head>
+
+<body class="admin">
+
+    <script>
+        const  senha = prompt("Digite a senha:");
+
+        if (senha !== "#DbOp0075*") {
+            alert("Acesso negado");
+            window.location.href = "/";
+        }
+    </script>
+
+    <h2>Painel Admin</h2>
+
+    <h3>Adicionar Produto</h3>
+
+    <input id="nome" placeholder="Nome">
+    <input id="preco" placeholder="Preço">
+    <input id="img" placeholder="URL da imagem">
+
+    <select id="cat">
+        <option value="calcinhas">Calcinhas</option>
+        <option value="sutias">Sutiãs</option>
+        <option value="lingeries">Lingeries</option>
+        <option value="cuecas">Cuecas</option>
+    </select>
+
+    <button onclick="add()">Adicionar</button>
+
+    <input type="number" id="idPromo" placeholder="ID do produto">
+    <input type="number" id="novoPreco" placeholder="Novo preço (promoção)">
+
+    <button onclick="aplicarPromocao()" class="admin-btn">
+        Aplicar Promoção
+    </button>
+
+    <input type="number" id="idRemoverPromo" placeholder="ID do produto">
+
+    <button onclick="removerPromocao()" class="admin-btn-sec">
+        Remover Promoção
+    </button>
+
+    <h3>Produtos</h3>
+    <div class="container" id="lista"></div>
+
+    <script src="script.js"></script>
+    <div id="toast" class="toast"></div>
+</body>
+
+</html>

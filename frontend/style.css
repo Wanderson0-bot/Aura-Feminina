@@ -14,6 +14,7 @@
   --cinza: #808080;
   --cinza-quase-branco: #f5f5f5;
   --rosa-claro: #e91e63;
+  --vermelho: #e53935; /* ✅ ADICIONADO */
 }
 
 html, body {
@@ -96,7 +97,7 @@ body.home {
 /* CARRINHO */
 .home .home-icone-carrinho {
   position: relative;
-  margin-left: 5px;
+  right: 5px;
 }
 
 .home .home-icone-carrinho:hover {
@@ -536,6 +537,7 @@ body.cart {
   margin-top: 10px;
   background: transparent;
   border: 1px solid var(--dourado);
+  color: var(--dourado);
 }
 
 /* BOTÃO REMOVER */
@@ -1130,6 +1132,11 @@ body.categoria {
     top: 0;
     gap: 12px;
   }
+
+  .home .home-icone-carrinho {
+    position: relative;
+    right: 30px;
+ }
 
   .home .home-contador {
     top: -6px;

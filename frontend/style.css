@@ -618,13 +618,14 @@ body.cart {
 
 /* ESCOPO CATEGORIA */
 /* GRID DOS PRODUTOS */
-.categoria-header {
-  background: rgba(0, 0, 0, 0.671);
+.categoria .categoria-header {
+  background: rgba(0,0,0,0.9);
   position: fixed;
-  color: var(--branco);
+  top: 0;              
+  left: 0;         
   width: 100%;
   height: 70px;
-  z-index: 999;
+  z-index: 9999;      
 }
 
 .categoria #produtos {
@@ -1056,16 +1057,6 @@ button:hover {
 .toast.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-
-.categoria .categoria-header {
-  background: rgba(0, 0, 0, 0.671);
-  position: fixed;
-  color: var(--branco);
-  width: 100%;
-  height: 70px;
-  z-index: 999;
 }
 
 .categoria .categoria-logo h1 {

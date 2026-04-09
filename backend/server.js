@@ -21,10 +21,11 @@ app.use("/img-aura", express.static(path.join(frontendPath, "img-aura")));
 // CONEXÃO COM BANCO
 // ===============================
 const db = mysql.createConnection({
-  host: "127.0.0.1", // 🔥 corrigido
-  user: "root",
-  password: "123456", // coloque sua senha aqui
-  database: "aura_feminina"
+  host: process.env.DB_HOST, // 🔥 corrigido
+  user: process.env.DB_USER, // 🔥 corrigido",
+  password: process.env.DB_PASSWORD, // coloque sua senha aqui
+  database: process.env.DB_NAME,// 🔥 corrigido
+  port: process.env.DB_PORT// 🔥 corrigido
 });
 
 function garantirColunaPrecoAntigo() {

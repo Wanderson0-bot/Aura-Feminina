@@ -621,6 +621,7 @@ body.cart {
 .categoria .categoria-header {
   background: rgba(0,0,0,0.9);
   position: fixed;
+  color: var(--branco);
   top: 0;              
   left: 0;         
   width: 100%;
@@ -1059,10 +1060,11 @@ button:hover {
   transform: translateY(0);
 }
 
-.categoria .categoria-logo h1 {
+.categoria .categoria-logo {
+  display: flex;
+  margin-left: 10px;
   position: relative;
-  top: 15px;
-  margin-left: 30px;
+  top: 10px;
 }
 
 .categoria .categoria-aura {

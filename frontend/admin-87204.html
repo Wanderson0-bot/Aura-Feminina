@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+</head>
+
+<body class="admin">
+
+    <script>
+        const  senha = prompt("Digite a senha:");
+
+        if (senha !== "#DbOp0075*") {
+            alert("Acesso negado");
+            window.location.href = "/";
+        }
+    </script>
+
+    <div class="admin-box">
+        <h2>Painel Admin</h2>
+
+        <h3>Adicionar Produto</h3>
+
+        <input id="nome" placeholder="Nome">
+        <input id="preco" placeholder="Preço">
+        <input id="img" placeholder="URL da imagem">
+        <input id="tamanhos" placeholder="Tamanhos separados por vírgula">
+        <input id="cores" placeholder="Cores separadas por vírgula">
+        <input id="estoque" placeholder="Estoque" type="number" min="0">
+
+        <select id="cat">
+            <option value="calcinhas">Calcinhas</option>
+            <option value="sutias">Sutiãs</option>
+            <option value="lingeries">Lingeries</option>
+            <option value="cuecas">Cuecas</option>
+        </select>
+
+        <button onclick="add()">Adicionar</button>
+
+        <h3>Produtos</h3>
+        <div class="container" id="lista"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="toast" class="toast"></div>
+</body>
+
+</html>
